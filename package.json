@@ -1,0 +1,42 @@
+{
+  "name": "js-utils",
+  "version": "0.0.1",
+  "description": "Javascript utilities",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "exports": {
+    "require": "./dist/cjs/index.js",
+    "import": "./dist/esm/index.js"
+  },
+  "type": "module",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build:cjs": "babel src --out-dir dist/cjs --env-name cjs",
+    "build:esm": "babel src --out-dir dist/esm --env-name esm",
+    "build": "npm run build:cjs && npm run build:esm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tranquangkhuong/js-utils.git"
+  },
+  "keywords": [
+    "javascript",
+    "utilities",
+    "utils"
+  ],
+  "author": {
+    "name": "Tran Quang Khuong",
+    "email": "khuongtran.it@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tranquangkhuong/js-utils/issues"
+  },
+  "homepage": "https://github.com/tranquangkhuong/js-utils#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.26.4",
+    "@babel/preset-env": "^7.26.0"
+  }
+}
